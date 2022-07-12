@@ -46,9 +46,11 @@ var opend = -1
         for(var i= 0; i <=2; i++){
             if (i !== opend && i !== selected){
                 selected = i
+                break;
             }
 
         }
+        console.log('selected'+selected)
         result()
     }
 
@@ -79,12 +81,12 @@ var opend = -1
         document.getElementById("result").hidden = false
         if(a[selected] == 1){
             // win= win+1
-            document.getElementById("result").innerHTML = "Congo !! You won<br><button onclick='restart()' class='text-white bg-red-600 p-1 text-xl rounded'>restart</button>"
+            document.getElementById("result").innerHTML = "Congo !! You won<br><button onclick='restart()' class='text-white bg-red-600 p-1 text-xl rounded'>Restart</button>"
             // document.getElementById("count").innerHTML = "win : " + win.toString() + "loss : " + loss.toString()
         }
         else{
             // loss= loss+1
-            document.getElementById("result").innerHTML = "You Lose<br><button onclick='restart()' class='text-white bg-red-600 p-1 text-xl rounded'>restart</button>"
+            document.getElementById("result").innerHTML = "You Lose<br><button onclick='restart()' class='text-white bg-red-600 p-1 text-xl rounded'>Restart</button>"
             // document.getElementById("count").innerHTML = "win : " + win.toString() + "loss : " + loss.toString()
         }
         
@@ -96,6 +98,7 @@ var opend = -1
         selected = -1
         reveled = -1
         opend = -1
+        console.log(a)
         document.getElementById("result").innerHTML =""
         document.getElementById("gameboard").innerHTML=`
         <a id="0"  onclick='select(this)' class=" rounded overflow-hidden shadow-lg">
@@ -114,4 +117,14 @@ var opend = -1
           
           
         </a>`
+    }
+
+    function hidemodel(){
+        console.log('hidemodel')
+        document.getElementById("model").hidden = true
+    }
+
+    function showmodel(){
+        console.log('hidemodel')
+        document.getElementById("model").hidden = false
     }
