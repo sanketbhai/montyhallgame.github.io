@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monty Hall Game</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="gameboard" class="p-10 h-80 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+        <!--Card 1-->
+        <a id="0"  onclick='select(this)' class=" rounded overflow-hidden shadow-lg">
+          <img class="w-full h-full " src="door.jpg" alt="Mountain">
+          
+        </a>
+        <!--Card 2-->
+        <a id="1"  onclick='select(this)' class=" rounded overflow-hidden shadow-lg">
+          <img id="img" class="w-full h-full" src="door.jpg" alt="River">
+         
+        </a>
+    
+        <!--Card 3-->
+        <a id="2"  onclick='select(this)' class=" rounded overflow-hidden shadow-lg">
+          <img class="w-full h-full" src="door.jpg" alt="Forest">
+          
+          
+        </a>
+      </div>
+    </div>
+
+    <div hidden id="buttons" class="text-center">
+        <button onclick='switch1()' class="bg-red-500 text-white p-1 rounded"> Switch</button>
+        <button onclick='notswitch()' class="bg-green-500 text-white p-1 rounded">Not to switch </button>
+    </div>
+    <div hidden id="result" class="text-center text-red-400 text-4xl">
+
+    </div>
+</body>
+</html>
