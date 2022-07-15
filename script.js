@@ -15,8 +15,13 @@ var opend = -1
     function select(el){
         
         selected = parseInt(el.id)
+        
         el.setAttribute("style", "filter: brightness(50%);");
+        
         revel()
+        document.getElementById("1").onclick = null
+        document.getElementById("2").onclick = null
+        document.getElementById("0").onclick = null
     }
     
     
